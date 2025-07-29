@@ -36,6 +36,11 @@ nav {
     & ul {
         list-style: none;
         display: flex;
+
+        & li {
+            display: flex;
+            /* without this the was a tiny gap under lis */
+        }
     }
 
     & .home-li {
