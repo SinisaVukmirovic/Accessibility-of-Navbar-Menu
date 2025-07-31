@@ -68,3 +68,33 @@ nav {
         }
     }
 }
+
+@media screen and (width < 700px) {
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100svh;
+        width: min(15em, 100%);
+        z-index: 10;
+        border-left: 1px solid var(--hover-clr);
+
+        & ul {
+            width: 100%;
+            flex-direction: column;
+
+            & .home-li {
+                margin-right: unset;
+            }
+        }
+
+        & a {
+            width: 100%;
+            padding-left: 2.5em;
+
+            &.active-link {
+                border-bottom: none;
+            }
+        }
+    }
+}
