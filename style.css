@@ -69,15 +69,37 @@ nav {
     }
 }
 
+#open-sidebar-button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#close-sidebar-button {
+    margin-left: auto;
+    background: none;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
 @media screen and (width < 700px) {
     nav {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;
         height: 100svh;
         width: min(15em, 100%);
         z-index: 10;
         border-left: 1px solid var(--hover-clr);
+        transition: right 300ms ease-out;
+
+        &.show {
+            right: 0;
+        }
 
         & ul {
             width: 100%;
