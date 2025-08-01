@@ -70,7 +70,7 @@ nav {
 }
 
 #open-sidebar-button {
-    display: block;
+    display: none;
     background: none;
     border: none;
     padding: 1em;
@@ -79,11 +79,20 @@ nav {
 }
 
 #close-sidebar-button {
+    display: none;
     margin-left: auto;
     background: none;
     border: none;
     padding: 1em;
     cursor: pointer;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
 }
 
 @media screen and (width < 700px) {
@@ -99,6 +108,10 @@ nav {
 
         &.show {
             right: 0;
+        }
+
+        &.show ~ #overlay {
+            display: block;
         }
 
         & ul {
@@ -118,5 +131,10 @@ nav {
                 border-bottom: none;
             }
         }
+    }
+
+    #open-sidebar-button,
+    #close-sidebar-button {
+        display: block;
     }
 }
