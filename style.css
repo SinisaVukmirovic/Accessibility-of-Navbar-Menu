@@ -19,10 +19,14 @@ html {
 body {
     min-height: 100svh;
     background-color: var(--primary-clr);
+    
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-    padding: min(5em, 7%);
+    padding-inline: min(10em, 15%);
+    margin-block: 5rem;
 
     & p {
         margin-top: .35em;
@@ -137,4 +141,24 @@ nav {
     #close-sidebar-button {
         display: block;
     }
+}
+
+footer {
+    text-align: center;
+    padding: .5rem;
+    margin-top: auto;
+    background-color: var(--accent-clr);
+}
+
+section {
+    margin-block: 3rem;
+}
+
+h1,
+h2 {
+    margin-block: 2rem;
+}
+
+h3, h4 {
+    margin-block: 1.5rem .5rem;
 }
