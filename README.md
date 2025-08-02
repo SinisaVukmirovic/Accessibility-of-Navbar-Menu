@@ -8,7 +8,7 @@ ___
 aria-hidden="true". Controls that element should not be exposed to accessibility API. Cannot be reached with TAB key.
 
 #### aria-label
-aria-label="open sidebar". Discranet what the element is doing. What ever we assign to this aria label attribute, would be read outloud by the screen reader technology.
+aria-label="open sidebar". Describes what the element is doing. What ever we assign to this aria label attribute, would be read outloud by the screen reader technology.
 
 ##### If an element is controling an interactive element, it needs more aria attributes.
 
@@ -24,7 +24,7 @@ aria-current="page". This tells the screen readers that this is the current webs
 ___
 
 ### Focus of elements
-##### The focus should not the placed od elements that are not visible.
+##### The focus should not the placed on elements that are not visible.
 
 #### Inert attribute
 Inert attribute removes the element from the accessibility tree,
