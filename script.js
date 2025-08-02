@@ -8,11 +8,11 @@ media.addEventListener('change', e => updateNavbar(e));
 
 function updateNavbar(e) {
     const isMobile = e.matches;
+    const navLinks = document.querySelectorAll('nav a');
     
     if(isMobile) {
         navbar.setAttribute('inert', '');
         
-        const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 closeSidebar();
