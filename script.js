@@ -8,8 +8,16 @@ media.addEventListener('change', e => updateNavbar(e));
 
 function updateNavbar(e) {
     const isMobile = e.matches;
+    
     if(isMobile) {
         navbar.setAttribute('inert', '');
+        
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeSidebar();
+            });
+        });
     } else {
         navbar.removeAttribute('inert');
     }
@@ -26,5 +34,14 @@ function closeSidebar() {
     openButton.setAttribute('aria-expanded', 'false');
     navbar.setAttribute('inert', '');
 }
+
+// // to close menu on smartphone sizes when link is clicked
+// const navLinks = document.querySelectorAll('nav a');
+
+// navLinks.forEach(link => {
+//     link.addEventListener('click', () => {
+//         closeSidebar();
+//     });
+// });
 
 updateNavbar(media);

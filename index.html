@@ -8,6 +8,8 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
         <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
@@ -20,9 +22,9 @@
                     </button>
                 </li>
                 <li class="home-li"><a class="active-link" aria-current="page" href="index.html">Home</a></li>
-                <li><a href="./pages/about.html">About</a></li>
-                <li><a href="./pages/pricing.html">Features</a></li>
-                <li><a href="./pages/features.html">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#pricing">Features</a></li>
+                <li><a href="#features">Pricing</a></li>
                 <li><a class="accent-link" href="./pages/login.html">Login</a></li>
             </ul>
         </nav>
@@ -30,7 +32,7 @@
         <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
     </header>
 
-    <main>
+    <main id="main-content">
         <h1>Accessibility - NavBar Menu</h1>
 
         <section>
@@ -61,6 +63,32 @@
             <p>Inert attribute removes the element from the accessibility tree,
             <p>makes it untabbable,</p>
             <p>does not hide it visually</p>
+        </section>
+
+        <hr>
+
+        <section id="about">
+            <h3>About accessibility with ARIA attributes of Navbar menu.</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione modi error corporis enim aperiam! Vitae iste excepturi laborum similique tempore repellat voluptatum placeat voluptates ullam dicta odit minima atque ad, unde ea natus. Assumenda, delectus a. Totam tempora sequi rem. Consequatur, explicabo ratione ducimus numquam fugit cupiditate sapiente veritatis nihil.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit laborum, totam animi cum pariatur veritatis distinctio reprehenderit incidunt! Reiciendis dolores sed placeat, voluptatum tenetur est eos necessitatibus? Fugit, ratione expedita?</p>
+        </section>
+
+        <section id="features">
+            <h3>Features</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi suscipit animi ullam deserunt magnam temporibus, eius excepturi ipsum! Hic, laborum.</p>
+            <p>Menu on Desktops</p>
+            <p>Menu on Tablets</p>
+            <p>Menu on Smartphones</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique soluta ratione nulla blanditiis fugiat sapiente!</p>
+        </section>
+
+        <section id="pricing">
+            <h3>Pricing</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, inventore?</p>
+            <p>Basic plan - 0$</p>
+            <p>Standard plan - 0.00$</p>
+            <p>Premium plan - 00.00$</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, neque.</p>
         </section>
 
     </main>
